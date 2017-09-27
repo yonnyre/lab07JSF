@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>JSF Event Handling</title>
+	<h:outputStylesheet library="css" name="styles.css"/>
+
+</h:head>
+
+<h:body>
+
+	<h2>JDBC Integration Example</h2>
+
+	<h:dataTable value="#{userData.employees}" var="c"
+		styleClass="authorTable" headerClass="authorTableHeader"
+		rowClasses="authorTableOddRow,authorTableEvenRow">
+		<h:column>
+			<f:facet name="header">Name</f:facet>
+			#{c.firstName}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Lastname</f:facet>
+			#{c.lastName}
+		</h:column>
+	</h:dataTable>
+
+</h:body>
+</html>
